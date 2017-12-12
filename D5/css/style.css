@@ -1,4 +1,4 @@
-html, body {height: 100%; width: 100%;margin: 2vw;}
+html, body {height: 100%; width: 100%;margin: 0;}
 
 @font-face { font-family: 'gaborbold';
              src: url('../fonts/bold.otf') format('opentype'); }
@@ -35,15 +35,55 @@ body {
 /***** Transition  *******/
 
 
+
+.container {
+    background-color: #ccc;
+    position: relative;
+}
+
 .orange {
-    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    background-color: orange;    
     transition-property: all;
     transition-duration: 0.2s;
 }
 
-.orange:hover {
+.container:hover .orange {
     background-color: green;
     color: white;
-    transition-property: background-color,color;
+    bottom: 3vh;
+    transition-property: all;
     transition-duration: 2s,1s;
 }
+
+
+
+
+/***** ANimation  *******/
+
+
+@keyframes gabor {
+    
+    0%   {background-color: red;}
+    50%  {background-color: blue;margin-top:10vh;}
+    100% {background-color: yellow;}
+       
+}
+
+.schauspieler {
+    height: 20vh;
+    background-color: orange;
+    animation-name: gabor;
+    animation-duration: 10s;
+}
+
+
+
+
+
+
+
+
+
+
