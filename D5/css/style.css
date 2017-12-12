@@ -8,6 +8,8 @@ html, body {height: 100%; width: 100%;margin: 0;}
 body {
     
     font-family: 'gaborbold';
+    background-color: black;
+    color: white;
     
     
  
@@ -62,20 +64,22 @@ body {
 
 /***** ANimation  *******/
 
-
-@keyframes gabor {
+@keyframes fadein {
     
-    0%   {background-color: red;}
-    50%  {background-color: blue;margin-top:10vh;}
-    100% {background-color: yellow;}
+    0%   {opacity: 0;margin-left: 0;}
+    100% {opacity: 1;margin-left: 5vw;}
        
 }
 
-.schauspieler {
-    height: 20vh;
-    background-color: orange;
-    animation-name: gabor;
-    animation-duration: 10s;
+h1 {
+    animation-name: fadein;
+    animation-duration: 3s;
+}
+
+@media (orientation:landscape) {
+    
+    body {background-color: red;}
+    
 }
 
 
