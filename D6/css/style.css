@@ -1,1 +1,39 @@
 html, body {height: 100%; width: 100%;margin: 0;}
+
+
+.vater {
+
+    background-color: orange;
+    display: flex;
+    height: 100vh;
+}
+
+.vater>article {
+    background-color: deepskyblue;
+    border: 1px black solid;
+    flex: 1;
+    
+}
+
+.vater>article:not(:nth-child(3)) {
+    background-color: forestgreen;
+    
+}
+
+
+
+
+
+
+
+/*
+
+
+@media (orientation:portrait) {
+    
+    .vater {
+        flex-direction: column;
+    }
+    
+}
+*/
